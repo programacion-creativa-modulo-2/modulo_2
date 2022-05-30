@@ -1,0 +1,56 @@
+
+.fondo {
+    background-size: cover ;
+}
+#divpoesia {
+
+    height: 600px;
+    width: 400px;
+
+    
+    margin: auto;
+}
+#cuadro {
+    margin: 2.5% 2.5%;
+    background-color: #00000060;
+    height: 95%;
+    width: 95%;
+    box-shadow: 0 0 20px 20px #00000060
+
+
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    
+}
+
+.po {
+    text-align: center;
+
+}
+
+.poe {
+    text-align: right;
+    margin-right: 30px;
+}
+
+#entrada {
+    font-size: 30px;
+
+
+
+
+
+}
+.botones {
+    text-align: center;
+}
+button {
+    margin: 10px 30px;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
