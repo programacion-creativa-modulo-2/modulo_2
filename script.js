@@ -98,11 +98,11 @@ $(document).ready(function(){
 
     $("button").click(function () {
         $("button").css("transitio-duration", "1s")
-        $("button").css("background-color", "white")
-        $("button").css("color", "black")
+        $("button").css("background-color", "#8c3b15")
+        $("button").css("color", "white")
 
         $(this).css("transition-duration", "1s")
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "#2b282e")
         $(this).css("color", "white")
 
     })
@@ -131,15 +131,17 @@ $(document).ready(function(){
                 $("#poesia").append(parr)
                 
             }
-            var autor = "<p>" + p[1] + "</p>"
+            var autor = document.createElement("p")
             $(autor).attr("class", "x")
+            autor.textContent = p[1]
             $("#autor").append(autor)
             
-            var titulo = "<p>" + p[0] + "</p>"
+            var titulo = document.createElement("p")
             $(titulo).attr("class", "x")
+            titulo.textContent = p[0]
             $("#titulo").append(titulo)
             $("#titulo").css("font-size", "30px")
-            titulo.addClass = "x"
+
 
             $("#cuerpo").css("font-family",  "Zilla Slab Highlight, cursive")
 
