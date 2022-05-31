@@ -24,6 +24,8 @@ $(document).ready(function(){
 
         $("#portada").css("opacity", "0");
         $("#portada").css("z-index", "-1");
+        var audio = $("#audio")
+        audio.play
         // $("#portada").hide(10000);
 
 
