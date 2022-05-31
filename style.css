@@ -4,8 +4,9 @@
 }
 #divpoesia {
 
-    height: 550px;
+    height: 630px;
     width: 400px;
+    padding: 10px;
 
     
     margin: auto;
@@ -47,16 +48,91 @@ p {
     text-align: center;
 }
 button {
+    transition-duration: 0.5s;
     margin: 10px 30px;
     width: 100px;
     height: 45px;
     border-radius: 7px;
     font-size: 15px;
     cursor: pointer;
-    background-color: #8c3b15;
+    background-color: #000000;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
+
 }
+
+button:hover {
+    transition-duration: 0.5s;
+    background-color: #00000080;
+
+
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+}
+
 
 .x {
     color: #2b282e
+}
+
+#0 {
+    font-family: 'Cutive Mono', monospace;
+}
+
+#1 {
+    font-family: 'Spectral', serif;
+}
+
+#2 {
+    font-family: 'WindSong', cursive;
+}
+
+#3 {
+    font-family: 'Zilla Slab Highlight', cursive;
+}
+
+#botonesestilo{
+    width: 10%;
+    float: left;
+
+}
+
+#generate {
+    width: 10%;
+    
+
+    float: left;
+}
+
+#btn-generate {
+
+    visibility: hidden;
+}
+
+#portada {
+    position: absolute;
+    left: 0;
+    top: 0 ;
+
+}
+
+#botonportada {
+
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    height: 80px;
+    width: 120px;
+    background-color: white;
+    color: black;
+}
+
+#botonportada:hover {
+
+
+    background-color: #FFFFFF70;
+    color: black;
 }

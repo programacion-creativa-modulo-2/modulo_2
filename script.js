@@ -1,12 +1,32 @@
 $(document).ready(function(){
+    $("<audio></audio>").attr({
+        'id': "audio",
+        'src':'audio/november.mp3',
+        'volume':0.4,
+        'autoplay':'autoplay'
+    }).appendTo("body");
 
+    estilos = ["'Cutive Mono', monospace", "'Spectral', serif", "'WindSong', cursive", "'Zilla Slab Highlight', cursive"]
 
     fondos = ["1", "2", "3", "4", "5"]
     const random2 = Math.floor(Math.random() * fondos.length);
 
+    fotos_portada = ["1", "2", "3", "4"]
+    const random3 = Math.floor(Math.random() * fotos_portada.length);
+    $("#fotoportada").attr("src", "img/portada/p" + fotos_portada[random3] + ".jpg")
+
 
     $("body").css("background-image", "url(img/fondos/bg" + fondos[random2] + ".jpg)");
     $("body").css("background-size", "cover");
+
+    $("#botonportada").click(function() {
+        //$("#botonportada").css("visibility", "hidden")
+        $("#portada").css("visibility", "hidden")
+        var audio = $("#audio");
+        audio.play
+
+
+    })
 
 
     //serenidad
@@ -19,19 +39,19 @@ $(document).ready(function(){
     riqueza = ["Riqueza", "G. Mistral", "Tengo la dicha fiel\ny la dicha perdida:\nla una como rosa,\nla otra como espina.\n\nDe lo que me robaronno fui desposeída;\ntengo la dicha fiel\ny la dicha perdida,\ny estoy rica de púrpura\ny de melancolía.\n\n¡Ay, qué amante es la rosa\ny qué amada la espina!\nComo el doble contorno de dos frutas mellizas\ntengo la dicha fiel\ny la dicha perdida."]
 
     //ira
-    ira_1 = ["1", "1", "No quiero\nNo me gusta estar así\nPero mi paciencia se agotaba en cada pelea\nAsí que para por favor\nDejemos el enojo a un lado."]
-    ira_2 = ["1", "1", "Detesto mirarte y también no hacerlo,\nodio vivir contigo y también sin ti,\ndeseo salir corriendo y alejarme de aquí.\nMuero de tristeza si no te tengo,\npero también me enojo si a mi lado estás.\nPuedes quedarte o puedes marcharte,\nsi te quedas o te vas ya no me importa más."]
-    ira_3 = ["1", "1", "Odio, rabia, ira...¡\nQue fluyen por mis venas\ncuál río embravecido,\nque arde en mi alma\ny congela mis sentidos"] 
+    ira_1 = ["", "", "No quiero\nNo me gusta estar así\nPero mi paciencia se agotaba en cada pelea\nAsí que para por favor\nDejemos el enojo a un lado."]
+    ira_2 = ["", "", "Detesto mirarte y también no hacerlo,\nodio vivir contigo y también sin ti,\ndeseo salir corriendo y alejarme de aquí.\nMuero de tristeza si no te tengo,\npero también me enojo si a mi lado estás.\nPuedes quedarte o puedes marcharte,\nsi te quedas o te vas ya no me importa más."]
+    ira_3 = ["", "", "Odio, rabia, ira...¡\nQue fluyen por mis venas\ncuál río embravecido,\nque arde en mi alma\ny congela mis sentidos"] 
 
     //amor
-    shakespeare = ["1", "Shakespeare", "Estos placeres violentos tienen fines violentos, y en su triunfo mueren como fuego y polvo, que al besarse consumen"]
-    amor_2 = ["1", "Charles Bukowsky", "Quiero estar contigo, tan simple y tan complicado como eso."]
-    annabel = ["Annabel Lee", "Edgar Allan Poe", "Fue hace ya muchos, muchos años,\nen un reino junto al mar,\nhabitaba una doncella a quien tal vez conozcan\npor el nombre de Annabel Lee;\ny esta dama vivía sin otro deseo\nque el de amarme, y de ser amada por mí.\n\nYo era un niño, y ella una niña\nen aquel reino junto al mar;\nNos amamos con una pasión más grande que el amor,\nYo y mi Annabel Lee;\ncon tal ternura, que los alados serafines\nlloraban rencor desde las alturas.\nY por esta razón, hace mucho, mucho tiempo,\nen aquel reino junto al mar,\nun viento sopló de una nube,\nhelando a mi hermosa Annabel Lee;\nsombríos ancestros llegaron de pronto,\ny la arrastraron muy lejos de mi,\nhasta encerrarla en un oscuro sepulcro,\nen aquel reino junto al mar.\n\nLos ángeles, a medias felices en el Cielo,\nnos envidiaron, a Ella a mí.\nSí, esa fue la razón (como los hombres saben,\nen aquel reino junto al mar),\nde que el viento soplase desde las nocturnas nubes,\nhelando y matando a mi Annabel Lee.\n\nPero nuestro amor era más fuerte, más intenso\nque el de todos nuestros ancestros,\nmás grande que el de todos los sabios.\nY ningún ángel en su bóveda celeste,\nningún demonio debajo del océano,\npodrá jamás separar mi alma\nde mi hermosa Annabel Lee.\n\nPues la luna nunca brilla sin traerme el sueño\nde mi bella compañera.\nY las estrellas nunca se elevan sin evocar\nsus radiantes ojos.\nAún hoy, cuando en la noche danza la marea,\nme acuesto junto a mi querida, a mi amada;\na mi vida y mi adorada,\nen su sepulcro junto a las olas,\nen su tumba junto al rugiente mar."]
+    shakespeare = ["", "Shakespeare", "Estos placeres violentos tienen fines violentos, y en su triunfo mueren como fuego y polvo, que al besarse consumen"]
+    amor_2 = ["", "Charles Bukowsky", "Quiero estar contigo, tan simple y tan complicado como eso."]
+    annabel = ["Annabel Lee", "Edgar Allan Poe", "Fue hace ya muchos, muchos años,\nen un reino junto al mar,\nhabitaba una doncella a quien tal vez conozcan\npor el nombre de Annabel Lee;\ny esta dama vivía sin otro deseo\nque el de amarme, y de ser amada por mí.\n\nYo era un niño, y ella una niña\nen aquel reino junto al mar;\nNos amamos con una pasión más grande que el amor,\nYo y mi Annabel Lee;\ncon tal ternura, que los alados serafines\nlloraban rencor desde las alturas."]
 
     //nostalgia
     palabra = ["La Palabra", "Stella Diaz Varin", "Una sola será mi lucha\nY mi triunfo;\nEncontrar la palabra escondida\naquella vez de nuestro pacto secreto\na pocos días de terminar la infancia.\nDebes recordar\ndónde la guardaste\nDebiste pronunciarla siquiera una vez...\nYa la habría encontrado\nPero tienes razón ese era el pacto.\nMira cómo está mi casa, desarmada.\nHoja por hoja mi casa, de pies a cabeza.\nY mi huerto, forado permanente\nY mis libros cómo mi huerto,\nHojeado hasta el deshilache\nSin dar con la palabra.\nSe termina la búsqueda y el tiempo.\nVencida y condenada\nPor no hallar la palabra que escondiste."]
     nutre = ["¿De qué se Nutre la Nostalgia?", "Mario Benedetti", "Uno evoca dulzuras\ncielos atormentados\ntormentas celestiales\nescándalos sin ruido\npaciencias estiradas\nárboles en el viento\noprobios prescindibles\nbellezas del mercado\ncánticos y alborotos\nlloviznas como pena\nescopetas de sueño\nperdones bien ganados\npero con esos mínimos\nno se arma la nostalgia\nson meros simulacros\nla válida la única\nnostalgia es de tu piel"]
-    nostalgia_3 = ["1", "Safo", "Se fue la Luna.\nSe pusieron las Pléyades.\nEs medianoche.\nPasa el tiempo.\nEstoy sola"]
+    nostalgia_3 = ["", "Safo", "Se fue la Luna.\nSe pusieron las Pléyades.\nEs medianoche.\nPasa el tiempo.\nEstoy sola"]
 
 
     //asombro
@@ -47,15 +67,22 @@ $(document).ready(function(){
     asombro = [infinito, atardece, silencio] 
 
     sentimientos = [serenidad, amargura, ira, amor, nostalgia, asombro]
+    
     var eleccion = false
+    var eleccion_estilo = false
 
     p = 0
+
+    $("#0").css("font-family", estilos[0])
+    $("#1").css("font-family", estilos[1])
+    $("#2").css("font-family", estilos[2])
+    $("#3").css("font-family", estilos[3])
     
     $("#serenidad").click(function () {
         const random = Math.floor(Math.random() * serenidad.length);
         // console.log(serenidad[random])
         p = serenidad[random]
-        eleccion = true
+
         // for (var i = 0; i < p.length; i++) {
         //     var txt1 = "<p>" + p[i] + "</p>"
         //     $("#poesia").append(txt1)
@@ -64,49 +91,93 @@ $(document).ready(function(){
     $("#amargura").click(function () {
         const random = Math.floor(Math.random() * amargura.length);
         p = amargura[random]
-        eleccion = true
+
 
     })
 
     $("#ira").click(function () {
         const random = Math.floor(Math.random() * ira.length);
         p = ira[random]
-        eleccion = true
+
 
     })
 
     $("#amor").click(function () {
         const random = Math.floor(Math.random() * amor.length);
         p = amor[random]
-        eleccion = true
 
     })
 
     $("#nostalgia").click(function () {
         const random = Math.floor(Math.random() * nostalgia.length);
         p = nostalgia[random]
-        eleccion = true
+
 
     })
     $("#asombro").click(function () {
         const random = Math.floor(Math.random() * asombro.length);
         p = asombro[random]
-        eleccion = true
+
 
     })
     console.log(p)
 
-    $("button").click(function () {
-        $("button").css("transitio-duration", "1s")
-        $("button").css("background-color", "#8c3b15")
-        $("button").css("color", "white")
+
+    // $("button").mouseenter(function() {
+    //     $(this).css("transition-duration", "0.5s")
+    //     $(this).css("background-color", "#00000080")
+
+
+
+    // })
+
+    // $("button").mouseleave(function() {
+    //     $(this).css("transition-duration", "0.5s")
+    //     $(this).css("background-color", "#000000")
+
+    // })
+
+    $(".button1").click(function () {
+        $(".button1").css("transitio-duration", "0.5s")
+        $(".button1").css("background-color", "black")
+        $(".button1").css("color", "white")
 
         $(this).css("transition-duration", "1s")
-        $(this).css("background-color", "#2b282e")
-        $(this).css("color", "white")
+        $(this).css("background-color", "white")
+        $(this).css("color", "black")
+        eleccion = true
+        console.log(eleccion, eleccion_estilo)
+        if (eleccion == true && eleccion_estilo == true) {
+            console.log("holi")
+            // $("#btn-generate").css("transition-duration", "1s")
+            $("#btn-generate").css("visibility", "visible")
+
+            
+        }
 
     })
-    
+    e = "0"
+
+    $(".button2").click(function () {
+        $(".button2").css("transitio-duration", "0.5s")
+        $(".button2").css("background-color", "white")
+        $(".button2").css("color", "black")
+
+        $(this).css("transition-duration", "1s")
+        $(this).css("background-color", "black")
+        $(this).css("color", "white")
+        e = $(this).attr("id")
+        font = estilos[parseInt(e)]
+        eleccion_estilo = true
+        console.log(eleccion, eleccion_estilo)
+        if (eleccion == true && eleccion_estilo == true) {
+            // $("#btn-generate").css("transition-duration", "1s")
+            $("#btn-generate").css("visibility", "visible")
+
+            
+        }
+
+    })
 
 
     $("#btn-generate").click(function () {
@@ -115,35 +186,44 @@ $(document).ready(function(){
         const random1 = Math.floor(Math.random() * papel.length);
         console.log(papel[random1])
 
-        $("#divpoesia").css("background-image", "url(img/estilos/estilo" + papel[random1] + ".jpg)");
-        if (eleccion == true) {
+        
+        if (eleccion == true && eleccion_estilo == true) {
+            $("#divpoesia").css("background-image", "url(img/estilos/estilo" + papel[random1] + ".jpg)");
             poesia = p[2].split("\n")
             // console.log(p)
             // parr = document.createElement("p")
             // parr.textContent = p[2]
             // $("#poesia").append(parr)
+            var titulo = document.createElement("p")
+            $(titulo).attr("class", "x")
+            $(titulo).css("font-family", font)
+            titulo.textContent = p[0]
+            $("#titulo").append(titulo)
+            
+            
+            $("#titulo").css("font-size", "30px")
 
             for (var i = 0; i < poesia.length; i++) {
                 console.log(poesia[i])
                 var parr = document.createElement("p")
                 $(parr).attr("class", "x")
                 parr.textContent = poesia[i]
+                $(parr).css("font-family", font)
                 $("#poesia").append(parr)
                 
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
             }
             var autor = document.createElement("p")
             $(autor).attr("class", "x")
             autor.textContent = p[1]
+            $(autor).css("font-family", font)
             $("#autor").append(autor)
             
-            var titulo = document.createElement("p")
-            $(titulo).attr("class", "x")
-            titulo.textContent = p[0]
-            $("#titulo").append(titulo)
-            $("#titulo").css("font-size", "30px")
 
 
-            $("#cuerpo").css("font-family",  "Zilla Slab Highlight, cursive")
+
 
 
 
