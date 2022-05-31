@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("<audio></audio>").attr({
         'id': "audio",
         'src':'audio/november.mp3',
-        'volume':0.4,
+        'volume': 0.1,
         'autoplay':'autoplay'
     }).appendTo("body");
 
@@ -20,10 +20,12 @@ $(document).ready(function(){
     $("body").css("background-size", "cover");
 
     $("#botonportada").click(function() {
-        //$("#botonportada").css("visibility", "hidden")
-        $("#portada").css("visibility", "hidden")
-        var audio = $("#audio");
-        audio.play
+        $("#portada").css("transition-duration", "1s");
+
+        $("#portada").css("opacity", "0");
+        $("#portada").css("z-index", "-1");
+        // $("#portada").hide(10000);
+
 
 
     })
