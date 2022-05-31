@@ -3,7 +3,8 @@ $(document).ready(function(){
         'id': "audio",
         'src':'audio/november.mp3',
         'volume': 0.1,
-        'autoplay':'autoplay'
+        'autoplay':'autoplay',
+        'loop': 'true'
     }).appendTo("body");
 
     estilos = ["'Cutive Mono', monospace", "'Spectral', serif", "'WindSong', cursive", "'Zilla Slab Highlight', cursive"]
